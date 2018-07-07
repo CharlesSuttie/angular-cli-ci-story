@@ -5,14 +5,14 @@ language: node_js
 node_js:
   - "8"
 
-addons:
-  chrome:stable
+#addons:
+#  chrome:stable
 #
-#  apt:
-#    sources:
-#      - google-chrome
-#    packages:
-#      - google-chrome-stable
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
 
 install:
   # update npm to allow use of 'npm ci'
