@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run:
-        name: echo versions
+          name: echo versions
           command: |
             node --version
             npm --version
