@@ -12,12 +12,13 @@ addons:
     packages:
       - google-chrome-stable
 
-cache:
-  directories:
-     - ./node_modules
+#cache:
+#  directories:
+#     - ./node_modules
 
 install:
-  - npm install
+  - npm install -g npm@latest
+  - npm ci
 
 script:
   # Use Chromium instead of Chrome.
