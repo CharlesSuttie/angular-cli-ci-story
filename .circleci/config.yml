@@ -7,6 +7,12 @@ jobs:
       # see https://hub.docker.com/r/circleci/node/tags/
       - image: circleci/node:8.11.2-browsers
     steps:
+      - run:
+          name: echo versions
+            command: |
+              node --version
+              npm --version
+      - run: npm install -g npm @latest
       - checkout
       - restore_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
