@@ -13,7 +13,7 @@ jobs:
           command: |
             node --version
             npm --version
-      - run: npm install -g npm@latest
+      - run: sudo npm install -g npm@latest
       - restore_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm ci
