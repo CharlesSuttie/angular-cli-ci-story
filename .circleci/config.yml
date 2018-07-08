@@ -15,7 +15,7 @@ jobs:
             npm --version
             google-chrome --version
             chromedriver --version
-            npm run webdriver-manager status
+            ./node_modules/.bin/webdriver-manager status
       - restore_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
