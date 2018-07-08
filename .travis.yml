@@ -12,10 +12,12 @@ addons:
     packages:
       - google-chrome-stable
 
+cache:
+  directories:
+     - ./node_modules
+
 install:
-  # update npm to allow use of 'npm ci'
-  - npm install -g npm@latest
-  - npm ci
+  - npm install
 
 script:
   - npm run test -- --watch=false --progress=false --browsers=myChromeHeadless
