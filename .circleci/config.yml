@@ -8,13 +8,6 @@ jobs:
       - image: circleci/node:8-browsers
     steps:
       - checkout
-      - run:
-          name: echo versions
-          command: |
-            node --version
-            npm --version
-            google-chrome --version
-            chromedriver --version
       - restore_cache:
           key: my-project-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install
